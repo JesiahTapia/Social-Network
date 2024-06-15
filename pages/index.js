@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Databases } from 'appwrite';
+import { Databases, Client, Account } from 'appwrite';
 import appwriteClient from '@/libs/appwrite';
 
 import Feed from '@/components/Feed';
