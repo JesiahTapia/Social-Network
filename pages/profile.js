@@ -19,10 +19,13 @@ export default function Profile() {
     website: '',
     country: '',
     language: '',
+    error: '',
+
   });
 
   const displayUserSettings = useCallback(async () => {
     setProfileForm({
+
       name: currentAccount?.name || '',
       bio: currentAccount.prefs?.bio || '',
       website: currentAccount.prefs?.website || '',
@@ -31,7 +34,7 @@ export default function Profile() {
     });
   }, [currentAccount]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (currentAccount) {
       displayUserSettings();
     }
